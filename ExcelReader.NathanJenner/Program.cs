@@ -25,7 +25,6 @@ namespace ExcelReader.NathanJenner
             IConfiguration configuration = GetConfiguration();
 
             serviceCollection.AddSingleton<Application>();
-            //serviceCollection.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             serviceCollection.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(
         configuration.GetConnectionString("DefaultConnection"),
